@@ -1,4 +1,4 @@
-# gyaan
+# gyaan --- Get your Answers
 A Question and Answer platform.
 This is a QnA platform built using ruby on rails.
 

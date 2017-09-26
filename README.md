@@ -1,5 +1,5 @@
 # gyaan
-A Question and Answer platform
+A Question and Answer platform.
 This is a QnA platform built using ruby on rails.
 
 Features

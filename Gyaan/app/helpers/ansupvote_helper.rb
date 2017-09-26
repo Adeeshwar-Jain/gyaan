@@ -1,0 +1,2 @@
+module AnsupvoteHelper
+end

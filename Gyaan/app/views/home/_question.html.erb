@@ -1,0 +1,111 @@
+
+		
+		<style type="text/css">
+			div.userDetail
+			{
+				font-size:15px;
+				font-weight:bold;
+			}
+			div.content
+			{
+				font-size:20px;
+				font-weight:bold;
+			}
+			div.quesupvote form.upvote_ques input
+			{
+				height:30px;
+				width:70px;
+				border-radius:5px;
+				  background-color:khaki;
+			}
+			div.quesupvote form.upvote_ques input:hover
+			{
+				border:1px solid black;
+				background-color: green;
+				font-weight:bold;
+			}
+			div.quesdownvote form.downvote_ques input
+			{
+				height:30px;
+				width:70px;
+				border-radius:5px;
+				  background-color:khaki;
+			}
+			div.quesdownvote form.downvote_ques input:hover
+			{
+				border:1px solid black;
+				background-color:red;
+				font-weight:bold;
+			}
+
+
+		</style>
+
+
+		<div class="question_answer_answerform">
+		<div class="question">
+			<div class="left">
+				<div class="userImage">					
+					<% if question.user.profile_picture %>
+						<img src="/uploads/<%=question.user.profile_picture %>">
+					<%else%>
+						<%= image_tag 'dp.jpg' %>
+					<% end %>
+				</div>
+			</div>
+			<div class="right">
+				<strong>Question</strong>
+				<div class="userDetail">
+					<%= question.user.first_name %>
+					<%= question.user.last_name %>
+				</div>
+				<br>
+				<div class="content">
+					<%= question.content %> 			 
+				</div><br>
+				<div class ="ques_upvote_downvote">
+					<div class="quesupvote">
+						<%= button_to "Upvote", { controller:'quesupvote',action: 'upvote',ques_id: question.id }, method: :post,form_class: "upvote_ques",remote:true %> &nbsp; &nbsp;<%= question.quesupvotes.length %>			
+					</div>
+					<div class="quesdownvote">
+						<%= button_to "Downvote", { controller:'quesdownvote',action:'downvote',ques_id: question.id }, method: :post,form_class:"downvote_ques",remote:true %> &nbsp; &nbsp;<%= question.quesdownvotes.length %>			
+					</div>
+				</div>
+					
+
+		</div>
+		<div id = <%="question_"+question.id.to_s%>> </div>
+		
+	</div>
+	<!-- 	<%#byebug%> -->
+		
+	
+	
+	
+<div class="questionanswer">
+
+
+	<% ans= question.answers.order(created_at: :desc)%>
+	<%ans.each do |answer|%>
+	
+	<%#byebug%>
+	
+	<%= render 'answer', answer:answer %>
+
+	<%end%>	
+
+
+</div>
+	<div id="answerform">
+	<%= render 'answerform', question: question %>	
+	
+	
+	</div>
+</div>
+
+<!-- , remote: true -->
+
+<!-- # => "<form method="post" action="/controller/new" class="new-thing">
+#      <input value="New" type="submit" />
+#    </form>"
+ -->

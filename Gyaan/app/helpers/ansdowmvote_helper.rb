@@ -1,0 +1,2 @@
+module AnsdowmvoteHelper
+end

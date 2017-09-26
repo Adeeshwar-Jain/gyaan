@@ -1,0 +1,72 @@
+
+	<style type="text/css">
+			div.userDetail
+			{
+				font-size:15px;
+				font-weight:bold;
+			}
+			div.content
+			{
+				font-size:15px;
+				/*font-weight:bold;*/
+			}
+			div.ansupvote form.upvote_ans input
+			{
+				height:30px;
+				width:70px;
+				border-radius:5px;
+				  background-color:khaki;
+			}
+			div.ansupvote form.upvote_ans input:hover
+			{
+				border:1px solid black;
+				background-color: green;
+				font-weight:bold;
+			}
+			div.ansdownvote form.downvote_ans input
+			{
+				height:30px;
+				width:70px;
+				border-radius:5px;
+				  background-color:khaki;
+			}
+			div.ansdownvote form.downvote_ans input:hover
+			{
+				border:1px solid black;
+				background-color:red;
+				font-weight:bold;
+			}
+
+
+		</style>
+	<div class="answer">
+		<div class="left">
+			<div class="userImage">					
+					<% if answer.user.profile_picture %>
+						<img src="/uploads/<%=answer.user.profile_picture %>">
+					<%else%>
+						<%= image_tag 'dp.jpg' %>
+					<% end %>
+				</div>
+		</div> &nbsp;&nbsp;
+		<div class="right">
+			<strong>Answer</strong>
+		<div class="userDetail">
+			<%= answer.user.first_name %>
+					<%= answer.user.last_name %>
+		</div>
+		<br>
+		<div class="content">
+			<%= answer.content %>
+		</div>
+		<br>
+		<div class ="ans_upvote_downvote">
+				<div class="ansupvote">
+					<%= button_to "Upvote", { controller:'ansupvote',action: 'upvote',ans_id: answer.id }, method: :post,form_class: "upvote_ans",remote:true %> &nbsp; &nbsp;<%= answer.ansupvotes.length %>			
+				</div>
+				<div class="ansdownvote">
+					<%= button_to "Downvote", { controller:'ansdownvote',action:'downvote',ans_id: answer.id }, method: :post,form_class:"downvote_ans",remote:true %> &nbsp; &nbsp;<%= answer.ansdownvotes.length %>			
+				</div>
+			</div>
+		</div>
+	</div>

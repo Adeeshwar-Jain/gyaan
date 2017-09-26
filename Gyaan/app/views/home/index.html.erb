@@ -1,0 +1,44 @@
+<!-- <h2 class="one">Home#index</h2>
+<p>Find me in app/views/home/index.html.erb</p> -->
+
+<article>
+	<aside>
+
+
+
+	</aside>
+	<section>
+		<div id="question">
+	<%@ques.each do |question|%>
+	<%= render 'question', question: question %>
+	
+
+
+	<%end %>
+	
+</div>
+<button id="scroll">scrollToTop</button>
+</section>
+</article>
+
+<style type="text/css">
+	button#scroll{
+
+		position:fixed;
+		top:600px;
+		left:1225px;
+		//height:25px;
+		//width:250px;
+		border-radius:5px;
+	}
+	button#scroll:hover{		
+		background-color:purple;
+		font-weight:bold;
+		border:2px solid black;
+	}
+
+</style>
+
+
+<!-- form_tag(controller: "question", action: "create", class: "ask_ques")
+# => '<form accept-charset="UTF-8" action="/people/search?method=get&class=nifty_form" method="post"> -->

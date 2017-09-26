@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quorafinal</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+
+
+	<%#byebug%>
+	
+      <% if notice %>
+<script type="text/javascript">
+	noty({text: '<%= notice %>', type: 'success'});
+</script>
+
+<% end %>
+
+
+<% if alert %>
+
+<script type="text/javascript">
+	noty({text: '<%= alert %>', type: 'error'});
+</script>
+<% end %>
+
+
+    
+	<div class="nav-bar">
+		<%if user_signed_in?%>
+			<header class="top">
+		 		<div class="logo">
+					<%= image_tag 'newestlogo1.png' %>
+				</div>	
+				<div class="createQuestion">
+
+	<%= form_tag({controller: "/questions", action: "create"}, class: "ask_ques") do %>
+	
+	  <%= text_field_tag(:content,nil ,placeholder:'Ask Question')%>
+	  <%= submit_tag("Ask Question") %>
+	  <span id="characters">0</span>
+	<% end %>
+</div>
+				<nav class="loggedin">	
+					<div class="left">
+			<div class="userImage">					
+					<% if current_user.profile_picture %>
+						<img src="/uploads/<%=current_user.profile_picture %>">
+					<%else%>
+						<%= image_tag 'dp.jpg' %>
+					<% end %>
+				</div>
+		</div>
+			
+				Signed in as &nbsp;  <strong><%=current_user.first_name%></strong> &nbsp; Not You? &nbsp; 
+				<nav class="nav-nav"> 
+				<%=link_to 'Home', '/' %>| <%=link_to ' Edit profile ','/profile',method: :get%> | <%=link_to ' Settings ',edit_user_registration_path, method: :get%>  | <%=link_to ' Sign out ',destroy_user_session_path,method: :delete%>
+				</nav>
+				</nav>  
+			</header>
+		
+		<%end%>		
+	</div>
+    
+
+
+
+	      <!--  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p> -->
+
+
+<%= yield %>
+
+</body>
+</html>

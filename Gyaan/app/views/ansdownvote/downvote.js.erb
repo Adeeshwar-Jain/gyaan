@@ -1,0 +1,5 @@
+<% if @is_downvoted%>
+	noty({text: 'You have downvoted! this answer', type: 'error'});
+<%else%>
+	noty({text: 'Your downvote! on this answer has been removed ', type: 'success'});
+<%end%>

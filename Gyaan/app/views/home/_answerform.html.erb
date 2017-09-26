@@ -1,0 +1,18 @@
+<%= form_tag({controller: "answers", action: "create"}, class: "give_ans") do %>
+	  <%=label_tag(:ans, "Answer") %>
+	  <%=text_field_tag(:content,nil ,placeholder:"What's your response?")%>
+	  <%=hidden_field_tag( :quest, question.id)%>
+
+	  <%= submit_tag("Submit Answer") %>
+	  <span id="characters">0</span>
+	<% end %>
+
+	<style type="text/css">
+		div#answerform
+
+
+	</style>
+
+
+
+	<!-- #, remote: true -->

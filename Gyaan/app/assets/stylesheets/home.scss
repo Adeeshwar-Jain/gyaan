@@ -1,0 +1,290 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//<% #label_tag(:ques, "Question") %>
+
+div.nav-bar{
+header.top{
+display:flex;
+position:fixed;
+width:96.75%;
+height:	10px;
+padding:20px;
+align-items:center;
+justify-content:space-between;
+background-color:white;
+border-bottom: 1px solid black;
+border: 2px solid #b92b27;
+div.logo{
+	img{
+	padding:70px;
+	height:50px;
+	
+	}
+}
+nav.loggedin{
+display:flex;
+align-items:center;
+  div.left{
+                    width: 50px;
+                    div.userImage{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 20px;
+                        background-color: white;
+
+                        img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 20px;
+                        }
+                    }
+
+
+                }
+     nav.nav-nav{
+                  display:flex;
+                  width:250px;
+                  justify-content:space-around;
+
+                }
+
+}
+div.createQuestion{
+  strong{
+  h2{
+    display:flex;
+    flex-direction:row;
+  }
+  }
+  form.ask_ques
+  {input#content{
+  width:350px;
+  height:14px;
+  padding:6px;
+  border-radius:5px;
+  background-color:#eee;
+  position:relative;
+  left:-30px;
+  }
+  input{
+     background-color:#9fbcd6;
+    position :relative;
+    left:-35px;
+    height:30px;
+    width:100px;
+  }
+  input:hover{
+   background-color:#b92b27; //#9fbcd6;
+   font-weight:bold;
+
+  }
+
+  }
+  span#characters{
+  position:relative;
+  left:-30px;
+  }
+  
+}
+
+}
+}
+
+
+article {
+  display:flex;
+  aside{
+  	width:200px;
+  }
+  section{
+    flex-grow:1;
+    div#question{
+      div.question_answer_answerform{
+       display: flex;
+       
+       flex-direction:column;
+       padding:10px;
+       padding-left:20px;
+       padding-bottom:50px;
+       margin:74px;
+       //margin-left:40px;
+       //margin-right:40px;
+       border-radius:5px;
+       width:75%;
+       background-color:gainsboro;
+      	div.question{
+      	   border: 1px solid #efefef;
+           display: flex;
+          // height:150px;
+          width: 95%;
+           padding: 10px; 
+           margin-top:20px;
+           margin-bottom:20px;
+           background-color:coral;
+           border-radius:5px;
+           div.left{
+                   width: 60px;
+                    div.userImage{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 25px;
+                        background-color: white;
+
+                        img{
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 25px;
+                        }
+                    }
+                }
+
+      			
+      	div.right{                 
+             flex-grow:1;
+             display:flex;              
+              flex-direction:column;
+              justify-content:space-around;
+              div.content:hover{
+              text-decoration:underline;
+              }
+             div.ques_upvote_downvote{
+             display:flex;
+             justify-content:space-between;
+
+             div.quesupvote{
+             display:flex;
+             align-items:center;
+             }
+             div.quesdownvote{
+             display:flex;
+             align-items:center;
+             }
+
+
+             }
+             
+
+             
+           }
+          } 
+
+
+          div.questionanswer{
+              div.answer{
+             // border: 1px solid black;
+              display: flex;
+              //justify-content:space-between;
+              //height:150px;
+              width: 95%;
+              padding: 10px; 
+             
+              margin-top:20px;
+           margin-bottom:20px;
+            border-radius:5px;
+            background-color:lightgreen;
+             div.left{
+                    width: 90px;
+                    div.userImage{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 25px;
+                        background-color: white;
+
+                        img{
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 25px;
+                        }
+                    }
+
+
+                }
+
+             
+              div.right{ 
+              display:flex;
+              flex-direction:column;
+               justify-content:space-between; 
+               
+                
+             flex-grow:1;
+             div.ans_upvote_downvote{
+             display:flex;
+             justify-content:space-between;
+
+             div.ansupvote{
+             display:flex;
+             align-items:center;
+             }
+             div.ansdownvote{
+             display:flex;
+             align-items:center;
+             }
+
+
+             }
+             
+           }
+
+
+
+              }
+
+
+
+          }
+          div#answerform{
+      	      //border: 1px solid black;
+              display: flex;
+              width: 90%;
+              height:100px;
+              padding: 6px; 
+              form.give_ans{
+              input#content{
+              width:230%;
+              height:75%;
+              margin-left:4px;
+              margin-bottom:4px;
+            
+              }
+              input{
+              margin-left:3px;
+              }
+              
+                input{
+                background-color:khaki;
+                  height:30px;
+                  width:100px;
+                  border-radius:5px;
+                }
+                input:hover{
+                  border:1px solid black;
+                    background-color:lightseagreen;
+                  font-weight:bold;
+                }
+                input#content{
+                padding:6px;
+                background-color:white;
+                }
+
+
+              }
+            	
+      		
+
+
+      	} 
+      }
+
+    }
+
+  }
+}
+#scroll{
+      height:30px;
+      width: 80px;
+    }
+      

@@ -1,0 +1,6 @@
+noty({text: 'Answer was Created', type: 'success'});
+<% str="#question_"+@answer.question.id.to_s %>
+//<% str="div.question_"+@answer.question.id.to_s %>
+ //console.log("asd");
+$("<%= str %>").append("<%= escape_javascript (render 'home/answer', answer: @answer) %>");
+$("input#content").val("");

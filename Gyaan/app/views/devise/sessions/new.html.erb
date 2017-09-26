@@ -1,0 +1,71 @@
+<body class="signinBody">
+  <div class="signin">
+<div class="signinlogo">
+          <%= image_tag 'newestlogo1.png' %>
+        </div>  
+      <nav class="SigninSignup">
+        <%=link_to 'Sign up',new_user_registration_path,:class=> "signuplink"%> | <%=link_to 'Sign in',new_user_session_path,:class=> "signinlink"%>
+      </nav>
+<h2 class="one">Sign in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <strong>
+      <h3>
+    <%= f.label :username %><br />
+    </h3>
+    </strong>
+    <%= f.text_field :username, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <strong>
+       <h3>
+    <%= f.label :password %><br />
+    </h3>
+    </strong>
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Sign in" %>
+  </div>
+
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+
+<div class="hello"></div>
+</body>
+
+
+
+<style type="text/css">   
+
+.signinlink
+{
+  color:red;
+}
+.signinlink:hover
+{
+  color:ivory;
+}
+
+.signuplink
+{
+  color:red;
+}
+.signuplink:hover
+{
+  color:ivory;
+}
+</style>
+          

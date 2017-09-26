@@ -1,0 +1,8 @@
+
+ 
+<% if @is_upvoted%>
+
+	noty({text: 'You have upvoted! this question', type: 'success'});
+<%else%>
+	noty({text: 'Your upvote on this question has been removed ', type: 'error'});
+<%end%>

@@ -22,8 +22,8 @@ Here are some links to screeshots for the application
 6. https://user-images.githubusercontent.com/29729072/30885060-7ec8280c-a32f-11e7-986d-5e0dfc36018a.png.
 7. https://user-images.githubusercontent.com/29729072/30885075-92215da6-a32f-11e7-8efc-d730bdca9f50.png.
 8. https://user-images.githubusercontent.com/29729072/30885153-dc5e848e-a32f-11e7-8ad2-fe094c6089cf.png.
-9. https://user-images.githubusercontent.com/29729072/30885216-fcd2077c-a32f-11e7-9c8b-767a2e043b68.png
-10.https://user-images.githubusercontent.com/29729072/30954811-35d10fd0-a44f-11e7-939f-c97d110bae70.png
+9. https://user-images.githubusercontent.com/29729072/30885216-fcd2077c-a32f-11e7-9c8b-767a2e043b68.png.
+10.https://user-images.githubusercontent.com/29729072/30954811-35d10fd0-a44f-11e7-939f-c97d110bae70.png.
 
 Or you can see the screenshots of the application in the issues section as well.
 
